@@ -1,0 +1,15 @@
+.env
+*.key
+private_key.txt
+__pycache__/
+venv/
+.idea/
+.vscode/
+# 如果有大数据文件
+*.parquet
+*.csv
+/target
+**/*.rs.bk
+codex-target/
+codex-targetslqh8o/
+codex-target-userfixzo7olc/

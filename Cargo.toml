@@ -1,0 +1,30 @@
+[package]
+name = "poly_bot"
+version = "0.1.0"
+edition = "2024"
+default-run = "poly_bot"
+
+[dependencies]
+polymarket-client-sdk = { version = "0.3.3", features = ["ws", "data"] }
+
+# 🚩 这样写：不带版本号前缀，只开必要功能
+alloy = { version = "1.2", default-features = false, features = ["signers", "signer-local"] }
+# 🚩 独立引入 primitives，这个包不带原生 C 库，不会冲突
+alloy-primitives = "0.8"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.21", features = ["native-tls"] }
+futures = "0.3"
+futures-util = "0.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rs-builder-relayer-client = "0.1"
+ethers = "2"
+rust_decimal = "1.34"
+num-traits = "0.2"
+chrono = { version = "0.4", features = ["serde"] }
+dotenvy = "0.15"
+log = "0.4"
+env_logger = "0.11"
+url = "2.5"
+crossbeam-channel = "0.5.15"
